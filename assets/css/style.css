@@ -456,26 +456,13 @@ template {
   display: none;
 }
 
-/*@import "skin";
-@import "variables";
-@import "mixins";
-@import "mixins-media";
-@import "extends";
-
-@import "common";
-@import "header/header";
-@import "header/header-overlay";
-@import "header/header-menu";
-@import "header/header-logo";
-@import "header/header-navbar";
-@import "header/header-content";
-
-@import "sections/section-skills";
-@import "sections/section-about";
-@import "sections/section-form";
-@import "sections/section-posts";
-
-@import "footer";*/
+/* ul */
+/* xl */
+/* lg */
+/* md */
+/* sm */
+/* xs */
+/* xx */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -633,8 +620,7 @@ a {
   transition: color 0.5s;
 }
 
-.header-navbar__link:hover,
-.header-navbar__link:focus {
+.header-navbar__link:hover, .header-navbar__link:focus {
   color: #d66926;
 }
 
@@ -645,7 +631,6 @@ a {
 
 .header-content__tittle {
   color: #ffffff;
-  margin: 0 0 53px 0;
   text-align: center;
   letter-spacing: 0.08em;
   font-weight: 300;
@@ -692,42 +677,6 @@ a {
   min-height: calc(33.333vh - 13.3px);
   overflow: hidden;
   /*TODO: no less then 200px height*/
-}
-
-.skill-item:nth-of-type(1) {
-  grid-area: a1;
-}
-
-.skill-item:nth-of-type(2) {
-  grid-area: a2;
-}
-
-.skill-item:nth-of-type(3) {
-  grid-area: a3;
-}
-
-.skill-item:nth-of-type(4) {
-  grid-area: a4;
-}
-
-.skill-item:nth-of-type(5) {
-  grid-area: a5;
-}
-
-.skill-item:nth-of-type(6) {
-  grid-area: a6;
-}
-
-.skill-item:nth-of-type(7) {
-  grid-area: a7;
-}
-
-.skill-item:nth-of-type(8) {
-  grid-area: a8;
-}
-
-.skill-item:nth-of-type(9) {
-  grid-area: a9;
 }
 
 .skill-item__image {
@@ -801,4 +750,67 @@ a {
 
 .skill-item:hover .skill-item__link {
   color: #d66926;
+}
+
+.skill-item:nth-of-type(1) {
+  grid-area: a1;
+}
+
+.skill-item:nth-of-type(2) {
+  grid-area: a2;
+}
+
+.skill-item:nth-of-type(3) {
+  grid-area: a3;
+}
+
+.skill-item:nth-of-type(4) {
+  grid-area: a4;
+}
+
+.skill-item:nth-of-type(5) {
+  grid-area: a5;
+}
+
+.skill-item:nth-of-type(6) {
+  grid-area: a6;
+}
+
+.skill-item:nth-of-type(7) {
+  grid-area: a7;
+}
+
+.skill-item:nth-of-type(8) {
+  grid-area: a8;
+}
+
+.skill-item:nth-of-type(9) {
+  grid-area: a9;
+}
+
+@media (min-width: 992px) {
+  h1 {
+    font-size: 3.75rem;
+  }
+  .header-content__tittle {
+    margin: 0 0 53px 0;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  .header-content__tittle {
+    margin: 0 0 43px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 1.875rem;
+  }
+  .header-content__tittle {
+    margin: 0 0 33px 0;
+  }
 }
