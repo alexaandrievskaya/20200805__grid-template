@@ -1,38 +1,48 @@
-.header-content {
-  position: relative;
-  width: 100%;
+.header-content
+{
+    position: relative;
 
-  &__tittle {
-    color: $color-light;
-    text-align: center;
-    letter-spacing: 0.08em;
-    font-weight: 300;
-    line-height: 1.2;
+    width: 100%;
 
-    @include lg-min {
-      margin: 0 0 53px 0;
+    &__tittle
+    {
+        font-weight: 300;
+        line-height: 1.2;
+
+        text-align: center;
+        letter-spacing: .08em;
+
+        color: $color-light;
+
+        @include lg-min
+        {
+            margin: 0 0 53px 0;
+        }
+        @include lg-md
+        {
+            margin: 0 0 43px 0;
+        }
+        @include md
+        {
+            margin: 0 0 33px 0;
+        }
     }
 
-    @include lg-md {
-      margin: 0 0 43px 0;
+    &__buttons
+    {
+        display: flex;
+
+        justify-content: center;
+
+        .btn:first-of-type
+        {
+            margin-right: 20px;
+        }
     }
 
-    @include md {
-      margin: 0 0 33px 0;
+    &__container
+    {
+        @extend %container;
     }
-  }
-
-  &__buttons {
-    display: flex;
-    justify-content: center;
-
-    .btn:first-of-type {
-      margin-right: 20px;
-    }
-  }
-
-  &__container {
-    @extend %container;
-  }
 }
 

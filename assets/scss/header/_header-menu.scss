@@ -1,13 +1,16 @@
-.header-menu {
-  position: absolute;
-  top: 0;
-  width: 100%;
+.header-menu
+{
+    position: absolute;
+    top: 0;
 
-  &__container {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
+    width: 100%;
 
-    @extend %container;
-  }
+    &__container
+    {
+        display: grid;
+
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        @extend %container;
+    }
 }

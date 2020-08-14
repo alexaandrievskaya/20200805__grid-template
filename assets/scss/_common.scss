@@ -1,87 +1,112 @@
-* {
-  box-sizing: border-box;
+*
+{
+    box-sizing: border-box;
 }
 
-html {
-  overflow-y: scroll;
-  font-size: $font-size;
-  font-family: $font-main;
-  color: $color-gray;
+html
+{
+    font-family: $font-main;
+    font-size: $font-size;
+
+    overflow-y: scroll;
+
+    color: $color-gray;
 }
 
-@mixin lg-min {
-  @media (min-width: $lg) {
-    @content;
-  }
+@mixin lg-min
+{
+    @media (min-width: $lg)
+    {
+        @content;
+    }
 }
 
-@mixin lg-md {
-  @media (max-width: $lg - 1px) and (min-width: $md) {
-    @content
-  }
+@mixin lg-md
+{
+    @media (max-width: $lg - 1px) and (min-width: $md)
+    {
+        @content
+    }
 }
 
-@mixin md {
-  @media (max-width: $md - 1px) {
-    @content
-  }
+@mixin md
+{
+    @media (max-width: $md - 1px)
+    {
+        @content
+    }
 }
 
-h1 {
-  font-family: $font-header;
+h1
+{
+    font-family: $font-header;
 
-  @include lg {
-    font-size: 3.75rem;
-  };
-  @include lg-md {
-    font-size: 2.5rem;
-  };
-  @include md {
-    font-size: 1.875rem;
-  };
+    @include lg
+    {
+        font-size: 3.75rem;
+    };
+    @include lg-md
+    {
+        font-size: 2.5rem;
+    };
+    @include md
+    {
+        font-size: 1.875rem;
+    };
 }
 
-h2 {}
 
-p{}
 
-a {
-  text-decoration: none;
-  color: $color-light;
+
+
+a
+{
+    text-decoration: none;
+
+    color: $color-light;
 }
 
-input {}
+
 
 .btn-accent,
-.btn {
-  display: block;
-  padding: 18px 20px;
-  height: 60px;
-  font-size: 1.25rem;
-  transition: background-color 0.5s;
-  text-align: center;
-  letter-spacing: 0.1em;
+.btn
+{
+    font-size: 1.25rem;
 
-  border: 2px solid $color-light;
-  background-color: rgba(255, 255, 255, 0.1);
-  min-width: 250px;
+    display: block;
+
+    min-width: 250px;
+    height: 60px;
+    padding: 18px 20px;
+
+    transition: background-color .5s;
+    text-align: center;
+    letter-spacing: .1em;
+
+    border: 2px solid $color-light;
+    background-color: rgba(255, 255, 255, .1);
 }
 
-.btn-accent {
-  border: 2px solid $color-primary;
-  background-color: rgba($color-primary, 0.8);
-  min-width: 250px;
+.btn-accent
+{
+    min-width: 250px;
+
+    border: 2px solid $color-primary;
+    background-color: rgba($color-primary, .8);
 }
 
-.btn {
-  border: 2px solid $color-light;
-  background-color: rgba($color-light, 0.1);
-  min-width: 250px;
+.btn
+{
+    min-width: 250px;
+
+    border: 2px solid $color-light;
+    background-color: rgba($color-light, .1);
 }
 
 .btn-accent:hover,
 .btn-accent:focus,
 .btn:hover,
-.btn:focus {
-  background-color: $color-accent;
+.btn:focus
+{
+    background-color: $color-accent;
 }
