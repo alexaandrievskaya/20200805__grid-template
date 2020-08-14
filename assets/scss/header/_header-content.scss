@@ -8,6 +8,18 @@
     letter-spacing: 0.08em;
     font-weight: 300;
     line-height: 1.2;
+
+    @include lg-min {
+      margin: 0 0 53px 0;
+    }
+
+    @include lg-md {
+      margin: 0 0 43px 0;
+    }
+
+    @include md {
+      margin: 0 0 33px 0;
+    }
   }
 
   &__buttons {
@@ -18,4 +30,9 @@
       margin-right: 20px;
     }
   }
+
+  &__container {
+    @extend %container;
+  }
 }
+

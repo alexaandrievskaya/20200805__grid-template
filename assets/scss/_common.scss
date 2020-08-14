@@ -9,9 +9,36 @@ html {
   color: $color-gray;
 }
 
+@mixin lg-min {
+  @media (min-width: $lg) {
+    @content;
+  }
+}
+
+@mixin lg-md {
+  @media (max-width: $lg - 1px) and (min-width: $md) {
+    @content
+  }
+}
+
+@mixin md {
+  @media (max-width: $md - 1px) {
+    @content
+  }
+}
+
 h1 {
   font-family: $font-header;
-  font-size: 3.75rem;
+
+  @include lg {
+    font-size: 3.75rem;
+  };
+  @include lg-md {
+    font-size: 2.5rem;
+  };
+  @include md {
+    font-size: 1.875rem;
+  };
 }
 
 h2 {}
