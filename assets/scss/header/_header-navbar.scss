@@ -5,15 +5,18 @@
 
     &__btn {
         position: relative;
-        //display: none;
 
         width: 30px;
         height: 22.5px;
-        margin: 25px auto;
+        margin: $gap 0;
 
         cursor: pointer;
         transition: .5s ease-in-out;
         transform: rotate(0deg);
+
+      @include md-min {
+        display: none;
+      }
 
         &-row {
             position: absolute;
@@ -103,13 +106,24 @@
     }
 
     &__list {
-        display: grid;
 
-        width: 100%;
 
-        @include unlist(0 -20px 0 0);
-        grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
-        justify-content: end;
+        @include unlist(0 (-$gap) 0 0);
+
+        @include md-min {
+          width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+            justify-content: end;
+        }
+          @include md {
+            display: none;
+            text-align: right;
+              position: absolute;
+              top: 100%;
+              right: $gap * 2;
+              background-color: rgba($color-gray-dark, 0.9);
+          }
     }
 
     &__link {
@@ -117,7 +131,7 @@
 
         display: block;
 
-        padding: 20px;
+        padding: $gap;
 
         transition: color .5s;
         letter-spacing: .09em;

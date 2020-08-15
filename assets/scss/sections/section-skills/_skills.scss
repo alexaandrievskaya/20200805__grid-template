@@ -1,46 +1,37 @@
-.skills
-{
-    margin-bottom: $gap / 2 * 3;
+.skills {
 
-    @include sm-min
-    {
+    @include sm-min {
         padding: $gap / 2;
+        margin-bottom: $gap / 2 * 3;
     }
-    @include sm
-    {
+    @include sm {
         padding: $gap;
     }
 
-    &__container
-    {
+    &__container {
         display: grid;
 
         margin-bottom: $gap;
 
-        @include lg-min
-        {
+        @include lg-min {
             grid-gap: $gap / 2;
             grid-template-areas: 'a1 a1 a2 a3' 'a4 a5 a5 a6' 'a7 a8 a9 a6';
         }
-        @include lg-md
-        {
+        @include lg-md {
             grid-gap: $gap / 2;
             grid-template-areas: 'a1 a1 a2' 'a3 a4 a4' 'a5 a5 a6' 'a7 a8 a6' 'a7 a9 a9';
         }
-        @include md-sm
-        {
+        @include md-sm {
             grid-gap: $gap / 2;
             grid-template-areas: 'a1 a2' 'a3 a2' 'a4 a4' 'a5 a6' 'a5 a7' 'a8 a9';
         }
-        @include sm
-        {
+        @include sm {
             grid-gap: $gap;
             grid-template-areas: 'a1' 'a2' 'a3' 'a4' 'a5' 'a6' 'a7' 'a8' 'a9';
         }
     }
 
-    &__button
-    {
+    &__button {
         display: flex;
 
         justify-content: center;
