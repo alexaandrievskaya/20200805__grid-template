@@ -1,8 +1,8 @@
 .skills {
-
+    /*padding: 10px;
+    margin-bottom: 30px;*/
     @include sm-min {
-        padding: $gap / 2;
-        margin-bottom: $gap / 2 * 3;
+        padding: ($gap / 2) ($gap / 2) ($gap * 2);
     }
     @include sm {
         padding: $gap;
@@ -16,24 +16,27 @@
         @include lg-min {
             grid-gap: $gap / 2;
             grid-template-areas: 'a1 a1 a2 a3' 'a4 a5 a5 a6' 'a7 a8 a9 a6';
+            grid-template-columns: repeat(4, 1fr);
         }
         @include lg-md {
             grid-gap: $gap / 2;
             grid-template-areas: 'a1 a1 a2' 'a3 a4 a4' 'a5 a5 a6' 'a7 a8 a6' 'a7 a9 a9';
+            grid-template-columns: repeat(3, 1fr);
         }
         @include md-sm {
             grid-gap: $gap / 2;
             grid-template-areas: 'a1 a2' 'a3 a2' 'a4 a4' 'a5 a6' 'a5 a7' 'a8 a9';
+            grid-template-columns: 1fr 1fr;
         }
         @include sm {
             grid-gap: $gap;
             grid-template-areas: 'a1' 'a2' 'a3' 'a4' 'a5' 'a6' 'a7' 'a8' 'a9';
+            grid-template-columns: 1fr;
         }
     }
 
     &__button {
         display: flex;
-
         justify-content: center;
     }
 }
